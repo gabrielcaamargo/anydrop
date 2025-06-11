@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032027C962DF4682A73E0464 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47811F259225468689D1072A /* Colors.xcassets */; };
 		0C80B921A6F3F58F76C31292 /* libPods-AnyDropApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-AnyDropApp.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		196F155BDB3948C386B76E63 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F6B6DAA2B64146854E486F /* BootSplash.storyboard */; };
 		3C86B754B3DE61299312BF1C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -27,6 +29,8 @@
 		2774C9741B93442A98D23097 /* Inter_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Regular.ttf; path = ../assets/fonts/Inter_Regular.ttf; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-AnyDropApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyDropApp.debug.xcconfig"; path = "Target Support Files/Pods-AnyDropApp/Pods-AnyDropApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3E4EF08AC8F846E480E3F44F /* Inter_Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Medium.ttf; path = ../assets/fonts/Inter_Medium.ttf; sourceTree = "<group>"; };
+		47811F259225468689D1072A /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = AnyDropApp/Colors.xcassets; sourceTree = "<group>"; };
+		47F6B6DAA2B64146854E486F /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = AnyDropApp/BootSplash.storyboard; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-AnyDropApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyDropApp.release.xcconfig"; path = "Target Support Files/Pods-AnyDropApp/Pods-AnyDropApp.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-AnyDropApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnyDropApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F95FA4C7F244468C480F62 /* Inter_Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter_Light.ttf; path = ../assets/fonts/Inter_Light.ttf; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				47F6B6DAA2B64146854E486F /* BootSplash.storyboard */,
+				47811F259225468689D1072A /* Colors.xcassets */,
 			);
 			name = AnyDropApp;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 				B8E3A3E15C5E4BCC81C6141A /* Inter_Medium.ttf in Resources */,
 				ADBADCCC9F9840C38D770320 /* Inter_Regular.ttf in Resources */,
 				980B79EDE61D4559B3DB51CD /* Inter_SemiBold.ttf in Resources */,
+				196F155BDB3948C386B76E63 /* BootSplash.storyboard in Resources */,
+				032027C962DF4682A73E0464 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
