@@ -1,0 +1,5 @@
+echo "Preparing everything to commit:\n"
+
+yarn lint-staged
+npx tsc --noEmit
+echo "Everything fine.\n"
