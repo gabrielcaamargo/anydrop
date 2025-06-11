@@ -4,7 +4,7 @@ export function SigninScreen() {
 	return (
 		<Screen>
 			<Box>
-				<Text>SigninScreen</Text>
+				<Text fontWeight="SemiBold">SigninScreen</Text>
 			</Box>
 		</Screen>
 	);
