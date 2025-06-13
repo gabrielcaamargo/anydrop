@@ -55,14 +55,14 @@ export function Text({
 	...textProps
 }: TextProps) {
 	const RText = createText<Theme>();
-
+	console.log('log:::', getFontFamily(fontWeight));
 	return (
 		<RText
+			{...textProps}
 			fontSize={fontSizes[preset].fontSize}
 			lineHeight={fontSizes[preset].lineHeight}
 			fontFamily={getFontFamily(fontWeight)}
-			color={color}
-			{...textProps}>
+			color={color}>
 			{children}
 		</RText>
 	);

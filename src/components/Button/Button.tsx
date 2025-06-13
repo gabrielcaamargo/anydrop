@@ -17,10 +17,10 @@ const buttonPresets: Record<
 	default: {
 		default: {
 			container: {
-				backgroundColor: 'blueMain',
+				backgroundColor: 'yellowMain',
 			},
 			text: {
-				color: 'white',
+				color: 'whitePure',
 			},
 		},
 		danger: {
@@ -28,15 +28,15 @@ const buttonPresets: Record<
 				backgroundColor: 'redMain',
 			},
 			text: {
-				color: 'white',
+				color: 'whitePure',
 			},
 		},
 		disabled: {
 			container: {
-				backgroundColor: 'grayMedium',
+				backgroundColor: 'grayMuted',
 			},
 			text: {
-				color: 'white',
+				color: 'whitePure',
 			},
 		},
 		warning: {
@@ -44,7 +44,7 @@ const buttonPresets: Record<
 				backgroundColor: 'yellowMain',
 			},
 			text: {
-				color: 'white',
+				color: 'whitePure',
 			},
 		},
 	},
@@ -53,10 +53,10 @@ const buttonPresets: Record<
 		default: {
 			container: {
 				borderWidth: 1,
-				borderColor: 'blueMain',
+				borderColor: 'yellowMain',
 			},
 			text: {
-				color: 'blueMain',
+				color: 'yellowMain',
 			},
 		},
 		danger: {
@@ -71,10 +71,10 @@ const buttonPresets: Record<
 		disabled: {
 			container: {
 				borderWidth: 1,
-				borderColor: 'grayMedium',
+				borderColor: 'grayMuted',
 			},
 			text: {
-				color: 'grayMedium',
+				color: 'grayMuted',
 			},
 		},
 		warning: {
@@ -106,8 +106,7 @@ export function Button({
 			justifyContent="center"
 			alignItems="center"
 			activeOpacity={0.5}
-			{...touchableOpacityBoxProps}
-		>
+			{...touchableOpacityBoxProps}>
 			<Text {...buttonPreset.text} fontWeight="SemiBold">
 				{title}
 			</Text>
