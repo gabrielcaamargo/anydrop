@@ -12,7 +12,12 @@
           "package_name": "com.anydropapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "933710790530-il0tf3m2150lc5travsenl03ssi9g0e3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCgyWTCJHqePVKQtOeM3iwU3uQmsEbMAfE"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933710790530-il0tf3m2150lc5travsenl03ssi9g0e3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "933710790530-imrrqrjqb6ltf6g9it0glhhfbf3gdqrq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anydropapp"
+              }
+            }
+          ]
         }
       }
     }
