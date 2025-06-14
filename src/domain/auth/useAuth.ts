@@ -28,24 +28,18 @@ export function useAuth() {
 	}
 
 	async function signinWithGoogle() {
-		console.log('Attempting Google Sign-In...');
 		await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
 
-		console.log('Google Sign-In has Play Services available');
 		const signInResult = await GoogleSignin.signIn();
-		console.log('Google Sign-In result:', signInResult);
 		const idToken = signInResult.data?.idToken;
 
 		if (!idToken) {
 			throw new Error('No ID token found');
 		}
 
-		console.log('Google Sign-In ID Token:', idToken);
 		const googleCredential = GoogleAuthProvider.credential(
 			signInResult.data?.idToken,
 		);
-
-		console.log('Google Sign-In result:', googleCredential);
 
 		return signInWithCredential(getAuth(), googleCredential);
 	}
