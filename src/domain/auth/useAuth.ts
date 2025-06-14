@@ -8,6 +8,8 @@ import {appleAuth} from '@invertase/react-native-apple-authentication';
 
 export function useAuth() {
 	async function signinWithApple() {
+		// TODO: Enroll with Apple Developer Program to use Apple Sign-In
+
 		const appleAuthResponse = await appleAuth.performRequest({
 			requestedOperation: appleAuth.Operation.LOGIN,
 			requestedScopes: [appleAuth.Scope.FULL_NAME, appleAuth.Scope.EMAIL],
@@ -22,4 +24,8 @@ export function useAuth() {
 
 		return signInWithCredential(getAuth(), appleCredential);
 	}
+
+	return {
+		signinWithApple,
+	};
 }
