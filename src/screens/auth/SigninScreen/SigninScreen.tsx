@@ -25,7 +25,7 @@ export function SigninScreen() {
 				{isIOS && (
 					<AppleButton
 						onPress={() => {}}
-						buttonStyle={AppleButton.Style.WHITE}
+						buttonStyle={AppleButton.Style.DEFAULT}
 						buttonType={AppleButton.Type.SIGN_IN}
 						style={{
 							width: '100%',
