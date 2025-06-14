@@ -1,6 +1,9 @@
 import {Box, Button, ImageBox, Screen, Text} from '@components';
+import {useIsIOS} from '@hooks';
 
 export function SigninScreen() {
+	const isIOS = useIsIOS();
+
 	return (
 		<Screen flex={1} alignItems="center">
 			<Box flex={1} alignItems="center" justifyContent="center">
@@ -18,7 +21,7 @@ export function SigninScreen() {
 
 			<Box gap="s8" width="100%" paddingBottom="s24" marginTop="s16">
 				<Button title="Entrar com Google" preset="outline" />
-				<Button title="Entrar com Apple" preset="outline" />
+				{isIOS && <Button title="Entrar com Apple" preset="outline" />}
 			</Box>
 		</Screen>
 	);
