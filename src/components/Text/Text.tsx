@@ -55,7 +55,6 @@ export function Text({
 	...textProps
 }: TextProps) {
 	const RText = createText<Theme>();
-	console.log('log:::', getFontFamily(fontWeight));
 	return (
 		<RText
 			{...textProps}
