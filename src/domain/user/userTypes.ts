@@ -15,4 +15,5 @@ export type User = {
 	displayName: string;
 	photoURL: string;
 	createdAt: string;
+	lastSignInAt: string;
 };
