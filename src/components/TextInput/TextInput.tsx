@@ -60,8 +60,8 @@ export function TextInput({
 	const borderColor: ThemeColors = errorMessage
 		? 'redMain'
 		: inputRef.current?.isFocused()
-		? 'blueMain'
-		: 'grayLight';
+		? 'yellowMain'
+		: 'grayMuted';
 
 	return (
 		<Box>
@@ -82,14 +82,14 @@ export function TextInput({
 					<RNTextInput
 						cursorColor={errorMessage ? 'redError' : 'greenMain'}
 						style={$textInputStyles}
-						placeholderTextColor={colors.grayMedium}
+						placeholderTextColor={colors.grayMuted}
 						ref={inputRef}
 						{...textInputProps}
 					/>
 
 					{iconName && (
 						<TouchableOpacityBox onPress={onPressIcon}>
-							<Icon name={iconName} size={16} color="blueMain" />
+							<Icon name={iconName} size={16} color="yellowMain" />
 						</TouchableOpacityBox>
 					)}
 				</Box>

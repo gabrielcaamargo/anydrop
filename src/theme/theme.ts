@@ -1,44 +1,49 @@
 import {createTheme} from '@shopify/restyle';
 
 const palette = {
-	blueMain: '#4A90E2',
-	blueDark: '#357ABD',
-	blueLight: '#E8F4FD',
-	blueAlt: '#5A9BF0',
+	// Branco - Base limpa
+	whitePure: '#FFFFFF',
+	whitePaper: '#FEFEFE',
+	whiteGhost: '#F8F9FA',
 
-	aquaMain: '#10B981',
-	aquaDark: '#059669',
-	aquaLight: '#D1FAE5',
+	// Cinza - Neutros e textos
+	grayBorder: '#E9ECEF',
+	grayMuted: '#ADB5BD',
+	graySubtle: '#6C757D',
+	grayText: '#212529',
+	grayDeep: '#1A1D23',
+	grayBlack: '#000000',
 
-	orangeMain: '#F59E0B',
-	orangeDark: '#D97706',
-	orangeLight: '#FEF3C7',
-	orangeAlt: '#FBBF24',
-
-	white: '#FFFFFF',
-	grayLight: '#F8FAFC',
-	grayMedium: '#9CA3AF',
-	graySemiDark: '#6B7280',
-	grayDark: '#2A2D3A',
-	grayLightest: '#E5E7EB',
-
-	grayBase: '#1F2937',
-	graySurface: '#374151',
-	graySurfaceHighlight: '#4B5563',
-
-	redMain: '#EF4444',
-	greenMain: '#10B981',
-	purpleMain: '#8B5CF6',
+	// Amarelo - Accent principal
 	yellowMain: '#F59E0B',
-} as const;
+	yellowDark: '#D97706',
+	yellowLight: '#FEF3C7',
+
+	// Verde - Success states
+	greenMain: '#059669',
+	greenLight: '#F0FDF4',
+
+	// Laranja - Warning states
+	orangeMain: '#EA580C',
+	orangeLight: '#FFF7ED',
+
+	// Vermelho - Error states
+	redMain: '#DC2626',
+	redLight: '#FEF2F2',
+
+	// Slate - Elementos secundários
+	slateMain: '#64748B',
+	slateLight: '#F1F5F9',
+	slateDark: '#334155',
+};
 
 export const theme = createTheme({
 	colors: {
 		...palette,
-		backgroundColor: palette.grayBase,
+		backgroundColor: palette.grayDeep,
 
-		textPrimary: palette.white,
-		textSecondary: palette.grayLightest,
+		textPrimary: palette.whitePure,
+		textSecondary: palette.grayMuted,
 	},
 
 	spacing: {
