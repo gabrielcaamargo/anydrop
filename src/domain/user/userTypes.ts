@@ -3,6 +3,10 @@ export type UserAPI = {
 	email: string;
 	displayName: string;
 	photoURL: string;
+	phoneNumber?: string | null;
+	tenantId?: string | null;
+	emailVerified?: boolean;
+	isAnonymous?: boolean;
 	metadata: {
 		creationTime: number;
 		lastSignInTime: number;
@@ -16,4 +20,8 @@ export type User = {
 	photoURL: string;
 	createdAt: string;
 	lastSignInAt: string;
+	phoneNumber?: string | null;
+	tenantId?: string | null;
+	emailVerified?: boolean;
+	isAnonymous?: boolean;
 };
