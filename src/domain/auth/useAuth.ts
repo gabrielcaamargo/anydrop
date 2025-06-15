@@ -1,10 +1,15 @@
 import {
 	AppleAuthProvider,
+	GoogleAuthProvider,
 	getAuth,
 	signInWithCredential,
 } from '@react-native-firebase/auth';
 
 import {appleAuth} from '@invertase/react-native-apple-authentication';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {UserAPI} from '../user';
+import {authService} from './authService';
+import {useEffect} from 'react';
 
 export function useAuth() {
 	async function signinWithApple() {
@@ -25,7 +30,25 @@ export function useAuth() {
 		return signInWithCredential(getAuth(), appleCredential);
 	}
 
+	async function signinWithGoogle() {
+		await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+
+		const signInResult = await GoogleSignin.signIn();
+		const idToken = signInResult.data?.idToken;
+
+		if (!idToken) {
+			throw new Error('No ID token found');
+		}
+
+		const googleCredential = GoogleAuthProvider.credential(
+			signInResult.data?.idToken,
+		);
+
+		return signInWithCredential(getAuth(), googleCredential);
+	}
+
 	return {
 		signinWithApple,
+		signinWithGoogle,
 	};
 }
