@@ -47,13 +47,6 @@ export function useAuth() {
 		return signInWithCredential(getAuth(), googleCredential);
 	}
 
-	useEffect(() => {
-		const unsubscribe = authService.onAuthStateChanged(firebaseUser => {
-			console.log({user: firebaseUser});
-		});
-		return unsubscribe;
-	}, []);
-
 	return {
 		signinWithApple,
 		signinWithGoogle,
