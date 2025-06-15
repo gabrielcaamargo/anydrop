@@ -7,6 +7,9 @@ import {
 
 import {appleAuth} from '@invertase/react-native-apple-authentication';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {UserAPI} from '../user';
+import {authService} from './authService';
+import {useEffect} from 'react';
 
 export function useAuth() {
 	async function signinWithApple() {
@@ -43,6 +46,13 @@ export function useAuth() {
 
 		return signInWithCredential(getAuth(), googleCredential);
 	}
+
+	useEffect(() => {
+		const unsubscribe = authService.onAuthStateChanged(firebaseUser => {
+			console.log({user: firebaseUser});
+		});
+		return unsubscribe;
+	}, []);
 
 	return {
 		signinWithApple,
