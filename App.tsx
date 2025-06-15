@@ -2,7 +2,7 @@ if (__DEV__) {
 	require('./ReactotronConfig');
 }
 
-import {useAuth} from '@domain';
+import {useAuth, useInitializeAuth} from '@domain';
 import {useAppTheme, useInitializeSdk} from '@hooks';
 import {getAuth, onAuthStateChanged} from '@react-native-firebase/auth';
 import {Routes} from '@routes';
@@ -15,7 +15,7 @@ export default function App() {
 	const {backgroundColor} = useAppTheme();
 
 	useInitializeSdk();
-	useAuth();
+	useInitializeAuth();
 
 	return (
 		<ThemeProvider theme={theme}>
