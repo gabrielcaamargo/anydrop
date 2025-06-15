@@ -1,3 +1,4 @@
+import {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import {User, UserAPI} from './userTypes';
 
 function toUser(userAPI: UserAPI): User {
@@ -32,7 +33,21 @@ function toUserAPI(user: User): UserAPI {
 	};
 }
 
+function firebaseUserToUser(user: FirebaseAuthTypes.User): User {
+	return {
+		displayName: user.displayName!,
+		createdAt: user.metadata.creationTime!,
+		email: user.email!,
+		emailVerified: user.emailVerified,
+		id: user.uid,
+		isAnonymous: user.isAnonymous,
+		lastSignInAt: user.metadata.lastSignInTime!,
+		photoURL: user.photoURL || '',
+	};
+}
+
 export const userAdapter = {
 	toUser,
 	toUserAPI,
+	firebaseUserToUser,
 };
