@@ -7,7 +7,7 @@ export function HomeScreen() {
 		<View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
 			<Text>HomeScreen</Text>
 
-			<Icon name="Camera" color="blueMain" />
+			<Icon name="Camera" color="yellowMain" />
 		</View>
 	);
 }

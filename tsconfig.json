@@ -4,6 +4,7 @@
 		"strict": true,
 		"baseUrl": "./",
 		"paths": {
+			"@brand": ["src/brand"],
 			"@components": ["src/components"],
 			"@hooks": ["src/hooks"],
 			"@routes": ["src/routes"],
@@ -13,7 +14,8 @@
 			"@api": ["src/api"],
 			"@types": ["src/types"],
 			"@lib": ["src/lib"],
-			"@utils": ["src/utils"]
+			"@utils": ["src/utils"],
+			"@storage": ["src/storage"]
 		}
 	}
 }
