@@ -10,6 +10,7 @@ interface AuthCredentialsProviderProps {
 
 export interface AuthCredentialsContextType {
 	authCredentials: AuthCredentials | null;
+	currentUser?: AuthCredentials['user'] | null;
 	saveAuthCredentials: (authCredentials: AuthCredentials) => Promise<void>;
 	getAuthCredentials: () => Promise<AuthCredentials | null>;
 }
@@ -38,6 +39,7 @@ export function AuthCredentialsProvider({
 	async function saveAuthCredentials(
 		authCredentials: AuthCredentials,
 	): Promise<void> {
+		setAuthCredentials(authCredentials);
 		await authCredentialsStorage.set(authCredentials);
 	}
 
@@ -51,6 +53,7 @@ export function AuthCredentialsProvider({
 				authCredentials,
 				getAuthCredentials,
 				saveAuthCredentials,
+				currentUser: authCredentials?.user,
 			}}>
 			{children}
 		</AuthCredentialsContext.Provider>
