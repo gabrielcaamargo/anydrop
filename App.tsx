@@ -2,6 +2,7 @@ if (__DEV__) {
 	require('./ReactotronConfig');
 }
 
+import {useAuth} from '@domain';
 import {useAppTheme, useInitializeSdk} from '@hooks';
 import {getAuth, onAuthStateChanged} from '@react-native-firebase/auth';
 import {Routes} from '@routes';
@@ -12,16 +13,9 @@ import {StatusBar} from 'react-native';
 
 export default function App() {
 	const {backgroundColor} = useAppTheme();
+
 	useInitializeSdk();
-
-	function handleAuthStateChanged(user: any) {
-		console.log({user});
-	}
-
-	useEffect(() => {
-		const subscriber = onAuthStateChanged(getAuth(), handleAuthStateChanged);
-		return subscriber; // unsubscribe on unmount
-	}, []);
+	useAuth();
 
 	return (
 		<ThemeProvider theme={theme}>
