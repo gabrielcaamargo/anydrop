@@ -1,3 +1,3 @@
 export const env = {
-	googleWebClientId: process.env.GOOGLE_WEB_CLIENT_ID!,
+	googleWebClientId: process.env.GOOGLE_WEBCLIENT_ID!,
 };
