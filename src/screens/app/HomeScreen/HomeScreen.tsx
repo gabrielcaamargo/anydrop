@@ -1,13 +1,10 @@
-import {Text, View} from 'react-native';
-import {Icon} from '@components';
-import {Camera} from 'lucide-react-native';
+import {Screen} from '@components';
+import {Header} from './components/Header/Header';
 
 export function HomeScreen() {
 	return (
-		<View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-			<Text>HomeScreen</Text>
-
-			<Icon name="Camera" color="yellowMain" />
-		</View>
+		<Screen>
+			<Header />
+		</Screen>
 	);
 }

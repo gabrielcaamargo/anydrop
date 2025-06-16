@@ -21,8 +21,6 @@ export function Icon({
 	const colors = useAppTheme();
 	const IconComponent = icons[name];
 
-	console.log('IconComponent', IconComponent);
-
 	return (
 		<Box {...boxProps}>
 			<IconComponent size={size} color={colors[color]} />
